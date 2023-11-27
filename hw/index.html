@@ -27,7 +27,31 @@
             border-radius: 5px;
             color: white;
         }
-        
+
+        .tab-content{
+            background-color: rgb(35, 84, 127);
+        }
+
+        .nav-link:hover{
+            background-color: rgb(35, 84, 127);
+        }
+        .nav-link:active{
+            background-color: rgb(35, 84, 127);
+        }
+        .nav-tabs .nav-link.active{
+            background-color: rgb(35, 84, 127);
+            color: white;
+            border: none;
+        }
+        .card{
+            height: 500px;
+            position: relative;
+        }
+        .card-body .btn{
+            position: absolute;
+            right: 15px;
+            bottom: 10px;
+        }
     </style>
 </head>
 
@@ -70,7 +94,7 @@
         </nav>
 
         <!-- carousel -->
-        <div id="carouselExampleCaptions" class="carousel slide mt-5">
+        <div id="carouselExampleCaptions" class="carousel slide mt-5 mb-5">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -123,49 +147,79 @@
             </button>
         </div>
 
-        <!-- card -->
-        <div class="row mt-5" id="1">
-            <div class="col-sm-4">
-                <div class="card">
-                    <img src="./img/card1.jpg" class="card-img-top col-4" alt="進行小隊合作，並與來自帕底亞地區的寶可夢一同慶祝吧！">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>進行小隊合作，並與來自帕底亞地區的寶可夢一同慶祝吧！</b></h5>
-                        <p class="card-text">親愛的訓練家們：
 
-                            賽季即將進入尾聲，而Pokémon GO將舉辦壓軸活動，慶祝小隊合作上線以及所有來自帕底亞地區的寶可夢將在「冒險時光」中首度登場！讓我們一起組隊GO吧！</p>
-                        <a href="https://pokemongolive.com/zh_hant/post/season12-finale-2023/"
-                            class="btn btn-primary" target="_blank">More</a>
+        <!-- navs tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+                    type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <!-- card -->
+                <div class="row p-5" id="1">
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <img src="./img/card1.jpg" class="card-img-top col-4" alt="進行小隊合作，並與來自帕底亞地區的寶可夢一同慶祝吧！">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>進行小隊合作，並與來自帕底亞地區的寶可夢一同慶祝吧！</b></h5>
+                                <p class="card-text">親愛的訓練家們：
+
+                                    賽季即將進入尾聲，而Pokémon GO將舉辦壓軸活動，慶祝小隊合作上線以及所有來自帕底亞地區的寶可夢將在「冒險時光」中首度登場！讓我們一起組隊GO吧！</p>
+                                <a href="https://pokemongolive.com/zh_hant/post/season12-finale-2023/"
+                                    class="btn btn-primary" target="_blank">More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <img src="./img/card2.jpg" class="card-img-top col-4" alt="時裝週重磅回歸，換上時尚服飾的寶可夢即將登場！">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>時裝週重磅回歸，換上時尚服飾的寶可夢即將登場！</b></h5>
+                                <p class="card-text">親愛的訓練家們：
+
+                                    準備好參與Pokémon GO最時尚的寶可夢時裝秀了嗎？這次不只有首度登場Pokémon GO的異色「哥德寶寶」，還有換上時尚服飾的「快龍」與「烏波」喔！</p>
+                                <a href="https://pokemongolive.com/zh_hant/post/fashion-week-2023/"
+                                    class="btn btn-primary" target="_blank">More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <img src="./img/card3.jpg" class="card-img-top col-4" alt="2023年11月經典社群日：咩利羊">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>2023年11月經典社群日：咩利羊</b></h5>
+                                <p class="card-text">台灣時間2023年11月25日（星期六）14:00～17:00
+
+                                    親愛的訓練家們：
+
+                                    我們在此很興奮地宣布，11月經典社群日的主角寶可夢會是綿毛寶可夢「咩利羊」！</p>
+                                <a href="https://pokemongolive.com/zh_hant/post/communityday-classic-mareep/"
+                                    class="btn btn-primary" target="_blank">More</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <img src="./img/card2.jpg" class="card-img-top col-4" alt="時裝週重磅回歸，換上時尚服飾的寶可夢即將登場！">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>時裝週重磅回歸，換上時尚服飾的寶可夢即將登場！</b></h5>
-                        <p class="card-text">親愛的訓練家們：
-
-                            準備好參與Pokémon GO最時尚的寶可夢時裝秀了嗎？這次不只有首度登場Pokémon GO的異色「哥德寶寶」，還有換上時尚服飾的「快龍」與「烏波」喔！</p>
-                        <a href="https://pokemongolive.com/zh_hant/post/fashion-week-2023/"
-                            class="btn btn-primary" target="_blank">More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <img src="./img/card3.jpg" class="card-img-top col-4" alt="2023年11月經典社群日：咩利羊">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>2023年11月經典社群日：咩利羊</b></h5>
-                        <p class="card-text">台灣時間2023年11月25日（星期六）14:00～17:00
-
-                            親愛的訓練家們：
-
-                            我們在此很興奮地宣布，11月經典社群日的主角寶可夢會是綿毛寶可夢「咩利羊」！</p>
-                        <a href="https://pokemongolive.com/zh_hant/post/communityday-classic-mareep/" class="btn btn-primary" target="_blank">More</a>
-                    </div>
-                </div>
-            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                ...</div>
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                ...</div>
         </div>
+        <!-- navs tabs end -->
+
+
+
 
         <!-- cpllapse -->
         <p class="d-inline-flex gap-1 mt-4" id="2">
@@ -194,49 +248,51 @@
     </div>
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top bg-light">
         <div class="col mb-3">
-          <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-          </a>
-          <p class="text-muted ps-5">© 2023/11 Rudy_Chen</p>
+            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+            <p class="text-muted ps-5">© 2023/11 Rudy_Chen</p>
         </div>
-    
+
         <div class="col mb-3">
-    
+
         </div>
-    
+
         <div class="col mb-3">
-          <h5>服務條款</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">純粹喜歡玩</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">然後善於查資料</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">所以是服務自己</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">你合則來</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">不合則去</a></li>
-          </ul>
+            <h5>服務條款</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">純粹喜歡玩</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">然後善於查資料</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">所以是服務自己</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">你合則來</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">不合則去</a></li>
+            </ul>
         </div>
-    
+
         <div class="col mb-3">
-          <h5>隱私權政策</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">也沒什麼隱私</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">都是網路查得到的資料</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">上面只有寶可夢個資</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">但寶可夢個資不算隱私</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">...對吧?</a></li>
-          </ul>
+            <h5>隱私權政策</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">也沒什麼隱私</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">都是網路查得到的資料</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">上面只有寶可夢個資</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">但寶可夢個資不算隱私</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">...對吧?</a></li>
+            </ul>
         </div>
-    
+
         <div class="col mb-3">
-          <h5>著作權政策</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">這排版是我自己排的啦</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">但元素細節是Bootstrap5</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">然後圖都是網路上找的</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">沒有要商用</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">所以拜託別檢舉(?)</a></li>
-          </ul>
+            <h5>著作權政策</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">這排版是我自己排的啦</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">但元素細節是Bootstrap5</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">然後圖都是網路上找的</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">沒有要商用</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">所以拜託別檢舉(?)</a></li>
+            </ul>
         </div>
-      </footer>
+    </footer>
 
 </body>
 
