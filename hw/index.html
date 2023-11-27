@@ -28,30 +28,38 @@
             color: white;
         }
 
-        .tab-content{
+        .tab-content {
             background-color: rgb(35, 84, 127);
         }
 
-        .nav-link:hover{
+        .nav-link:hover {
             background-color: rgb(35, 84, 127);
         }
-        .nav-link:active{
+
+        .nav-link:active {
             background-color: rgb(35, 84, 127);
         }
-        .nav-tabs .nav-link.active{
+
+        .nav-tabs .nav-link.active {
             background-color: rgb(35, 84, 127);
             color: white;
             border: none;
         }
-        .card{
+
+        .card {
             height: 500px;
+            border: none;
             position: relative;
+            box-shadow: 5px 5px 10px rgb(18, 43, 66);
         }
-        .card-body .btn{
+
+        .card-body .btn {
             position: absolute;
             right: 15px;
             bottom: 10px;
         }
+
+        footer {}
     </style>
 </head>
 
@@ -152,15 +160,15 @@
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
-                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true" style="color: white;">最新消息</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
-                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false" style="color: white;">近期出現寶可夢</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
-                    type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+                    type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false" style="color: white;">近期焦點寶可夢</button>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
@@ -211,88 +219,66 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 近期出現寶可夢 -->
             <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                ...</div>
+                <img src="./img/collapse1.jpg" alt="" >
+            </div>
+
+            <!-- 近期焦點寶可夢 -->
             <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                ...</div>
+            <img src="./img/collapse2.jpg" alt="">
+            </div>
         </div>
         <!-- navs tabs end -->
-
-
-
-
-        <!-- cpllapse -->
-        <p class="d-inline-flex gap-1 mt-4" id="2">
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
-                aria-expanded="false" aria-controls="multiCollapseExample1">近期出現寶可夢</a>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                data-bs-target="#multiCollapseExample2" aria-expanded="false"
-                aria-controls="multiCollapseExample2">近期焦點寶可夢</button>
-        </p>
-        <div class="row mb-5" style="min-height: 120px;">
-            <div class="col-8">
-                <div class="collapse multi-collapse" id="multiCollapseExample1">
-                    <div class="card card-body">
-                        <img src="./img/collapse1.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="collapse multi-collapse" id="multiCollapseExample2">
-                    <div class="card card-body">
-                        <img src="./img/collapse2.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top bg-light">
-        <div class="col mb-3">
-            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-                <svg class="bi me-2" width="40" height="32">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-            </a>
-            <p class="text-muted ps-5">© 2023/11 Rudy_Chen</p>
-        </div>
+        
+        <!-- footer -->
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5 border-top bg-light">
+                <div class="col mb-3">
+                    <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32">
+                            <use xlink:href="#bootstrap"></use>
+                        </svg>
+                    </a>
+                    <p class="text-muted ps-5">© 2023/11 Rudy_Chen</p>
+                </div>
 
-        <div class="col mb-3">
+                <div class="col mb-3"></div>
 
-        </div>
+                <div class="col mb-3">
+                    <h5>服務條款</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">純粹喜歡玩</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">然後善於查資料</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">所以是服務自己</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">你合則來</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">不合則去</a></li>
+                    </ul>
+                </div>
 
-        <div class="col mb-3">
-            <h5>服務條款</h5>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">純粹喜歡玩</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">然後善於查資料</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">所以是服務自己</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">你合則來</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">不合則去</a></li>
-            </ul>
-        </div>
+                <div class="col mb-3">
+                    <h5>隱私權政策</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">也沒什麼隱私</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">都是網路查得到的資料</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">上面只有寶可夢個資</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">但寶可夢個資不算隱私</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">...對吧?</a></li>
+                    </ul>
+                </div>
 
-        <div class="col mb-3">
-            <h5>隱私權政策</h5>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">也沒什麼隱私</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">都是網路查得到的資料</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">上面只有寶可夢個資</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">但寶可夢個資不算隱私</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">...對吧?</a></li>
-            </ul>
-        </div>
-
-        <div class="col mb-3">
-            <h5>著作權政策</h5>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">這排版是我自己排的啦</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">但元素細節是Bootstrap5</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">然後圖都是網路上找的</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">沒有要商用</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">所以拜託別檢舉(?)</a></li>
-            </ul>
-        </div>
-    </footer>
+                <div class="col mb-3">
+                    <h5>著作權政策</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">這排版是我自己排的啦</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">但元素細節是Bootstrap5</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">然後圖都是網路上找的</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">沒有要商用</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">所以拜託別檢舉(?)</a></li>
+                    </ul>
+                </div>
+        </footer>
 
 </body>
 
